@@ -1,0 +1,9 @@
+.list-group-item+.list-group-item:hover{
+  background-color:#003153;
+  color: #fff;
+}
+  .list-group-item.active{
+    background-color:#003153;
+    color: #fff;
+    border-color: #003153;
+  }

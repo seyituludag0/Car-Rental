@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ReCap Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+    <div class="container" *ngIf="carDetail">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="project-info-box mt-0">
+            <h5>CAR DETAILS</h5>
+            <p class="mb-0">{{ carDetail.description }}</p>
+          </div>
+          <hr />
+          <div class="project-info-box">
+            <p><b>Marka: </b> {{ carDetail.brandName }}</p>
+            <p><b>Model: </b> {{ carDetail.modelName }}</p>
+            <p><b>Renk: </b> {{ carDetail.colorName }}</p>
+            <p class="mb-0">
+              <b>Günlük Fiyat: </b> {{ carDetail.dailyPrice }} ₺
+            </p>
+            <p><b>Model Yılı: </b> {{ carDetail.modelYear }}</p>
+            <p><b>Findex Puanı: </b> {{ carDetail.minFindex }}</p>
+          </div>
+        </div>
+
+        <div *ngIf ="carImage.length>1"
+          class="col-md-7 carousel slide" style="margin-top: 8em;"
+          id="carouselExampleIndicators"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner image">
+            <div
+              class="carousel-item"
+              *ngFor="let image of carImage; index as i; first as firstImage"
+              [ngClass]="{ active: firstImage }"
+            >
+              <img draggable="false"
+                src="https://localhost:44357/uploads/carImages/{{image.imagePath}}" class="d-block w-100"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+
+      <div class="control-findex" *ngIf="carDetail.minFindex<=userFindex">
+        <div class="d-grid gap-2 mb-2" *ngIf="carDetail.status">
+          <app-rental></app-rental>
+        </div>
+
+        <div class="d-grid gap-2 mb-2" *ngIf="!carDetail.status">
+            <div class="alert alert-danger">Araç şuan kiralık durumda</div>
+        </div>
+      </div>
+
+      <div *ngIf="carDetail.minFindex>userFindex">
+        <div class="alert alert-danger">Findex puanınız yetersiz</div>
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"></script>
+  </body>
+</html>

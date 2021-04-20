@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sign Up Form by Colorlib</title>
+  </head>
+  <body>
+    <div class="main">
+      <section class="signup">
+        <img src="images/signup-bg.jpg" alt="" />
+        <div class="container">
+          <div class="signup-content">
+            <form class="signup-form" [formGroup]="registerForm">
+              <h2 class="form-title">Kayıt Ol</h2>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-input"
+                  formControlName="firstName"
+                  name="firstName"
+                  id="firstName"
+                  placeholder="Ad"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-input"
+                  formControlName="lastName"
+                  name="lastName"
+                  id="lastName"
+                  placeholder="Soyad"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-input"
+                  formControlName="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-input"
+                  formControlName="password"
+                  name="password"
+                  id="password"
+                  placeholder="Parola"
+                />
+                <span
+                  toggle="#password"
+                  class="zmdi zmdi-eye field-icon toggle-password"
+                ></span>
+              </div>
+              <div class="form-group">
+                <input
+                  (click)="register()"
+                  type="submit"
+                  class="form-submit"
+                  value="Kayıt Ol"
+                />
+              </div>
+            </form>
+            <p class="loginhere">
+              Zaten üye misiniz ?
+              <a href="/login" style="text-decoration: none;" class="loginhere-link">Giriş Yap</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- JS -->
+    <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
+    <!-- <script src="js/main.js"></script> -->
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+  <!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

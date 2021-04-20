@@ -1,0 +1,37 @@
+
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" style="margin-top: -1.4rem" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Markalar
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="mb-3" *ngIf="dataLoaded == true">
+          <input type="text" [(ngModel)]="filterText" class="form-control"
+          placeholder="Marka Giriniz...">
+        </div>
+        <ul class="list-group" *ngIf="dataLoaded == true" style="cursor: pointer;">
+          <li
+            routerLink="/cars"
+            [ngClass]="getAllBrandClass()"
+            (click)="removeCurrentBrand()"
+            aria-current="true"
+          >
+            Tüm markalar
+          </li>
+
+          <li
+            routerLink="/cars/brand/{{ brand.id }}"
+            (click)="setCurrentBrand(brand)"
+            *ngFor="let brand of brands | filterBrand:filterText"
+            [ngClass]="getCurrentBrandClass(brand)"
+          >
+            {{ brand.name }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

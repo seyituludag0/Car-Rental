@@ -1,0 +1,31 @@
+<div>
+  <caption id="caption-style">Kredi Kartlarım</caption>
+</div>
+<div class="cards row" *ngIf="cards.length">
+  <div class="col-md-4" style="margin-left: 10px;" *ngFor="let card of cards">
+    <div class="card" style="display: block;height: 260px;">
+      <button style="border: none; padding-right: 21px; float: right; background: no-repeat;padding-top: 10px;"
+        class="delete-button" (click)="deleteCard(card)"><i style="color: #fff;font-size: 25px;" class="fas fa-trash-alt"></i></button>
+      <div class="card-body" style="padding-top: 40px;">
+        <ul class="list-group list-group-flush">
+          <img
+          style="width: 55px; right: 10px;  position: absolute;"
+          src="https://img.icons8.com/color/48/000000/mastercard-logo.png"
+        />
+            <li class="list-group fs-2 cardNumber ">{{card.cardNumber }}</li>
+            <p class="validtext">VALID THRU</p>
+          <li class="list-group expirationDate">{{card.expirationDate}}</li>
+          <li class="list-group fs-5 cardOwner">
+            {{card.firstName | uppercase}} {{card.lastName | uppercase}}
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="cards.length==0">
+Kayıtlı kartınız bulunmamaktadır
+</div>
+

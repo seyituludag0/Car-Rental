@@ -1,0 +1,107 @@
+<!-- Carousel -->
+<div *ngIf="dataLoaded == true">
+
+</div>
+<!-- Carousel -->
+
+<!-- Filters -->
+<div class="col-3" style="margin-top: 1rem">
+  <app-brand></app-brand>
+  <br />
+  <app-color></app-color>
+</div>
+
+<!-- Filters -->
+
+<!-- Loading -->
+<div class="col-md-9" style="margin-top: 1rem">
+  <div class="mb-3" *ngIf="dataLoaded == true">
+    <input
+      type="text"
+      [(ngModel)]="carfilterText"
+      class="form-control"
+      id="filterColorText"
+      placeholder="Model adı giriniz"
+      style="margin-top: -25px;"
+    />
+  </div>
+  <!-- Loading -->
+
+  <!-- Car Filter -->
+  <div class="card-header text-center" *ngIf="dataLoaded == true">
+    <app-car-filter></app-car-filter>
+  </div>
+
+  <div class="card-header text-center" *ngIf="dataLoaded == false">
+    <app-car-filter></app-car-filter>
+  </div>
+  <!-- Car Filter -->
+
+  <!-- Loading -->
+  <div class="dataLoaded">
+    <div *ngIf="!dataLoaded" style="margin-left: 12rem">
+      <img src="https://i.gifer.com/3O8tL.gif" alt="Yükleniyor..." />
+      <h3 style="margin-left: 10rem">Yükleniyor...</h3>
+    </div>
+  </div>
+  <!-- Loading -->
+
+  <!-- Cars -->
+  <div class="row">
+    <div
+      class="col-md-4 car-box"
+      *ngFor="let car of carDetail | filterCar: carfilterText"
+    >
+
+    <!-- <img
+        [src]="
+        car.imagePath.length !== 0
+          ? baseUrl + car.imagePath[0]
+          : baseUrl + defaultImg
+      " class="card-img-top"
+      style="height:13rem"
+        /> -->
+
+
+      <div class="card">
+        <img
+        [src]="
+        car.imagePath.length !== 0
+          ? baseUrl + car.imagePath[0]
+          : baseUrl + defaultImg
+      " class="card-img-top"
+      style="height:13rem"
+        />
+        <div class="card-body">
+          <h5 class="card-title">
+            <b>Model</b><span class="float-right">{{ car.modelName }}</span>
+          </h5>
+          <p>
+            <b>Marka</b> <span class="float-right">{{ car.brandName }}</span>
+          </p>
+          <p>
+            <b>Renk</b><span class="float-right">{{ car.colorName }}</span>
+          </p>
+          <p>
+            <b>Günlük Ücret</b
+            ><span class="float-right">{{ car.dailyPrice }}</span>
+          </p>
+          <p>
+            <b>Findex Puanı</b
+            ><span class="float-right">{{ car.minFindex }}</span>
+          </p>
+          <button
+            routerLink="/car-detail/{{ car.id }}"
+            type="button"
+            class="btn w-100 btn-lg btn-primary"
+          >
+            Detayı Görüntüle
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Cars -->
+
+
+</div>

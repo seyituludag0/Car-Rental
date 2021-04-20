@@ -1,0 +1,159 @@
+<h4>Admin İşlemleri Menüsü</h4>
+<hr />
+<div class="operations">
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="true"
+          aria-controls="collapseOne"
+        >
+          İşlemler
+        </button>
+      </h2>
+      <div
+        id="collapseOne"
+        class="accordion-collapse collapse show"
+        aria-labelledby="headingOne"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          <div class="row">
+            <ul class="list-group" style="display: contents;">
+              <li class="list-group-item col-md-2" routerLink="/car/add" style="padding-top: 25px;
+              padding-left: 95px; margin-left: 450px;">
+                <i class="fas fa-car fa-2x" style="margin-left: -1rem;">  Ekle</i>
+              </li>
+              <li class="list-group-item col-md-2 brand" routerLink="/brand/add" style="padding-left: 95px;">
+                <img
+                  src="https://www.kisa.link/OKqh"
+                  style="width: 50px; height: 50px; margin-left: -40px;"
+                  alt="Brand Logo"
+                />
+                Ekle
+              </li>
+              <li class="list-group-item col-md-2" routerLink="/color/add" style="padding-top: 25px;
+              padding-left: 95px;">
+                <i class="fas fa-palette fa-2x" style="margin-left: -1rem;">  Ekle</i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h5 style="text-align: center">Arabalar</h5>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Marka</th>
+      <th scope="col">Model</th>
+      <th scope="col">Renk</th>
+      <th scope="col">Günlük Fiyat</th>
+      <th scope="col">Findex Puanı</th>
+      <th scope="col">Güncelle</th>
+      <th scope="col">Sil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of cars">
+      <th scope="row">{{ car.id }}</th>
+      <td>{{ car.brandName }}</td>
+      <td>{{ car.modelName }}</td>
+      <td>{{ car.colorName }}</td>
+      <td>{{ car.dailyPrice }}₺</td>
+      <td>{{ car.minFindex }}</td>
+      <td scope="col">
+        <button class="btn btn-success" routerLink="/car/update/{{ car.id }}">
+          Güncelle
+        </button>
+      </td>
+      <td scope="col">
+        <button
+          class="btn btn-danger"
+          holdable
+          (holdTime)="holdHandlerCar($event, car)"
+
+        >
+          Sil
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 style="text-align: center">Markalar</h5>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Marka İsmi</th>
+      <th scope="col">Güncelle</th>
+      <th scope="col">Sil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let brand of brands">
+      <th scope="row">{{ brand.id }}</th>
+      <td>{{ brand.name }}</td>
+      <td scope="col">
+        <button
+          class="btn btn-success"
+          routerLink="/brand/update/{{ brand.id }}"
+        >
+          Güncelle
+        </button>
+      </td>
+      <td scope="col">
+        <button
+          class="btn btn-danger"
+          holdable
+          (holdTime)="holdHandlerBrand($event, brand)"
+        >
+          Sil
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 style="text-align: center">Renkler</h5>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Renk İsmi</th>
+      <th scope="col">Güncelle</th>
+      <th scope="col">Sil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let color of colors">
+      <th scope="row">{{ color.id }}</th>
+      <td>{{ color.name }}</td>
+      <td scope="col">
+        <button
+          class="btn btn-success"
+          routerLink="/color/update/{{ color.id }}"
+        >
+          Güncelle
+        </button>
+      </td>
+      <td scope="col">
+        <button
+          class="btn btn-danger"
+          holdable
+          (holdTime)="holdHandlerColor($event, color)"
+        >
+          Sil
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

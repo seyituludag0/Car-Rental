@@ -1,0 +1,14 @@
+.btn-info {
+  color: #003153;
+  background-color: #fff;
+  border-color: #fff;
+}
+.btn-info:hover {
+  color: #123d5b;
+  background-color: #fff;
+  border-color: #fff;
+}
+.navbar-light .navbar-brand {
+  color: #fff;
+}
+

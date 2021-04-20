@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>RegistrationForm_v7 by Colorlib</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="inner">
+        <form [formGroup]="formData" action="https://formspree.io/f/mjvjkygv" (ngSubmit)="onSubmit(formData.value)">
+          <h3>Bize Ulaşın</h3>
+          <p>
+            Şikayetiniz, önerileriniz için ve tüm sorularınız için yazabilirsiniz
+          </p>
+          <label class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="fullName"
+              name="fullName"
+              id="input-color"
+            />
+            <span id="label-color">Ad Soyad</span>
+            <span class="border"></span>
+          </label>
+          <label class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              formControlName="email"
+              name="email"
+              id="input-color"
+            />
+            <span id="label-color"  for="email">Mail Adresiniz</span>
+            <span class="border"></span>
+          </label>
+          <label class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="message"
+              name="message"
+              id="input-color"
+            />
+            <span id="label-color">Mesajınız</span>
+            <span class="border"></span>
+          </label>
+          <button
+          >
+          Gönder
+        </button>
+        </form>
+      </div>
+    </div>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-23581568-13");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          $("button").click(function () {
+            $("#invoice").toggle();
+          });
+        });
+      </script>
+    </head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Rental Info -->
+    <div *ngIf="rentalDetails.length == 0">
+      <div class="alert alert-danger">Kiraladığınız araç yoktur</div>
+    </div>
+
+    <div *ngIf="rentalDetails.length > 0">
+      <div class="col-md-4 car-box" *ngFor="let rentalDetail of rentalDetails">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              <b>Model</b
+              ><span class="float-right">{{ rentalDetail.modelName }}</span>
+            </h5>
+            <p>
+              <b>Marka</b>
+              <span class="float-right">{{ rentalDetail.brandName }}</span>
+            </p>
+            <p>
+              <b>Renk</b
+              ><span class="float-right">{{ rentalDetail.colorName }}</span>
+            </p>
+            <p>
+              <b>Günlük Ücret</b
+              ><span class="float-right">{{ rentalDetail.dailyPrice }}</span>
+            </p>
+            <button
+              type="button"
+              id="invoice"
+              class="btn w-100 btn-lg btn-primary"
+            >
+              Faturayı Görüntüle
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- Invoice -->
+<div id="invoice" style="margin-left: 20rem; margin-top: -15rem">
+  <div class="invoice-box">
+    <table cellpadding="0" cellspacing="0" *ngFor="let info of rentalDetails">
+      <tr class="top">
+        <td colspan="2">
+          <table>
+            <tr>
+              <td class="title">
+                <img
+                  src="assets/logo.svg"
+                  style="width: 100%; max-width: 300px"
+                />
+              </td>
+
+              <td>
+                <br />
+                {{ now }}<br />
+                Due: February 1, 2015
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr class="information">
+        <td colspan="2">
+          <table>
+            <tr>
+              <td>
+                Marka: {{ info.brandName }}<br />
+                Model: {{ info.modelName }}<br />
+                Renk: {{ info.colorName }}
+              </td>
+
+              <td>
+                Şirket Adı: {{ info.companyName }}<br />
+                Kiralayan Kişi: {{ info.firstName }} {{ info.lastName }}<br />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr class="heading">
+        <td>Kiralanma Tarihi</td>
+
+        <td>{{ info.rentDate }}</td>
+      </tr>
+
+      <tr class="details">
+        <td>Teslim Tarihi</td>
+
+        <td>{{ info.returnDate }}</td>
+      </tr>
+
+      <tr class="heading">
+        <td>Ödeme Türü</td>
+
+        <td>Kredi Kartı</td>
+      </tr>
+
+      <tr class="details">
+        <td>Tutar</td>
+
+        <td>1000</td>
+      </tr>
+
+      <tr class="heading">
+        <td></td>
+
+        <td>Ücret</td>
+      </tr>
+
+      <tr class="item">
+        <td>Günlük Ücret</td>
+
+        <td>{{ info.dailyPrice }}</td>
+      </tr>
+
+      <!--
+          <tr class="item last">
+            <td>Domain name (1 year)</td>
+
+            <td>$10.00</td>
+          </tr> -->
+
+      <tr class="total">
+        <td></td>
+        <td>Toplam: $385.00</td>
+      </tr>
+    </table>
+  </div>
+</div>
