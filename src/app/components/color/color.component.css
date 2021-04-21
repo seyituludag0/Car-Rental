@@ -1,4 +1,4 @@
-/* .list-group-item+.list-group-item:hover{
+.list-group-item+.list-group-item:hover{
   background-color:#003153;
   color: #fff;
 }
@@ -6,4 +6,4 @@
     background-color:#003153;
     color: #fff;
     border-color: #003153;
-  } */
+  }

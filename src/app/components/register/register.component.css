@@ -1,4 +1,4 @@
-/* display-flex, .display-flex, .display-flex-center {
+display-flex, .display-flex, .display-flex-center {
   display: flex;
   display: -webkit-flex; }
 
@@ -351,4 +351,4 @@ input[type=checkbox]:not(old):checked + label > span:before {
     max-width: 100%; } }
 @media screen and (max-width: 480px) {
   .signup-content {
-    padding: 50px 25px; } } */
+    padding: 50px 25px; } }
