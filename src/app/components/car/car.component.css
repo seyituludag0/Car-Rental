@@ -1,5 +1,4 @@
-/* 1. Theme default css */
-
+/*
 a:hover,
 a:hover {
   text-decoration: none;
@@ -27,9 +26,7 @@ li {
   color:#003153
 }
 
-/* Theme default css */
 
-/* Inventory */
 .inventory-top-meta > ul {
   display: flex;
   align-items: center;
@@ -281,5 +278,4 @@ li {
 }
 .location-info-color{
   color: #6a6a6a;
-}
-/* Inventory */
+} */
