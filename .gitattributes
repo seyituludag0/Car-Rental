@@ -1,26 +1,4 @@
-#  linguist-vendored
-# .ts linguist-vendored=false
+ linguist-vendored
+.ts linguist-vendored=false
 
 
-PHP:
-app/**/*.php
-db/**/*.php
-phinx.php
-public/index.php
-
-HTML:
-app/**/*.twig
-public/index.html
-
-JavaScript:
-gulp/**/*.js
-gulpfile.js
-src/js/*.js
-src/plugins-js/*.js
-
-ApacheConf:
-public/.htaccess
-
-CSS:
-src/plugins-css/*.css
-src/scss/*.scss
