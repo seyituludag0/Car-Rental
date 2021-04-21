@@ -1,4 +1,4 @@
-.invoice-box {
+/* .invoice-box {
   max-width: 800px;
   margin: auto;
   padding: 30px;
@@ -76,7 +76,6 @@
   }
 }
 
-/** RTL **/
 .rtl {
   direction: rtl;
   font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
@@ -88,4 +87,4 @@
 
 .rtl table tr td:nth-child(2) {
   text-align: left;
-}
+} */

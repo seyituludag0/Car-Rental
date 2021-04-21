@@ -1,4 +1,4 @@
-*{
+/* *{
   margin: 0;
   padding: 0;
   font-family: "Open Sans",sans-serif;
@@ -23,7 +23,6 @@ body{
 
 .inner-container{
   width: 45%;
-  /* height: 1rem; */
   float: right;
   background-color: #fdfdfd;
   padding: 150px;
@@ -77,4 +76,4 @@ body{
 
 .icon{
   color: #000;
-}
+} */

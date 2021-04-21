@@ -1,57 +1,54 @@
-/* @extend display-flex; */
-display-flex, .display-flex, .display-flex-center {
+/* display-flex, .display-flex, .display-flex-center {
   display: flex;
   display: -webkit-flex; }
 
-/* @extend list-type-ulli; */
 list-type-ulli {
   list-style-type: none;
   margin: 0;
   padding: 0; }
 
-/* Montserrat-300 - latin */
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 300;
   src: url("../fonts/montserrat/Montserrat-Light.ttf");
-  /* IE9 Compat Modes */ }
+ }
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/montserrat/Montserrat-Regular.ttf");
-  /* IE9 Compat Modes */ }
+  }
 @font-face {
   font-family: 'Montserrat';
   font-style: italic;
   font-weight: 400;
   src: url("../fonts/montserrat/Montserrat-Italic.ttf");
-  /* IE9 Compat Modes */ }
+ }
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   src: url("../fonts/montserrat/Montserrat-Medium.ttf");
-  /* IE9 Compat Modes */ }
+ }
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   src: url("../fonts/montserrat/Montserrat-SemiBold.ttf");
-  /* IE9 Compat Modes */ }
+ }
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/montserrat/Montserrat-Bold.ttf");
-  /* IE9 Compat Modes */ }
+ }
 @font-face {
   font-family: 'Montserrat';
   font-style: italic;
   font-weight: 700;
   src: url("../fonts/montserrat/Montserrat-BoldItalic.ttf");
-  /* IE9 Compat Modes */ }
+ }
 @font-face {
   font-family: 'Montserrat';
   font-style: italic;
@@ -354,6 +351,4 @@ input[type=checkbox]:not(old):checked + label > span:before {
     max-width: 100%; } }
 @media screen and (max-width: 480px) {
   .signup-content {
-    padding: 50px 25px; } }
-
-/*# sourceMappingURL=style.css.map */
+    padding: 50px 25px; } } */

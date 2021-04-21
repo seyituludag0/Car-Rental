@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 *{
   font-family: 'Rubik', sans-serif i !important;
@@ -10,7 +10,6 @@
 }
 
 .footer-dark {
-    /* padding:50px 0; */
     color:#f0f9ff;
     background-color:#282d32;
   }
@@ -113,7 +112,6 @@
 
 
 
-/* SOCIAL ICON */
 .container {
   margin: 60px auto 0px auto;
   text-align: center;
@@ -138,7 +136,6 @@
   margin: 0px 0px 0px 2px;
 }
 .effect {
-  /* width: 10%; */
   padding: 50px 0px 70px 0px;
   background-color: #212121;
 }
@@ -161,18 +158,7 @@
   justify-content: center;
 }
 
-/* .icons{
-  margin-top: 10px;
-} */
 
-/* .icon-group{
-  margin-bottom: 1px;
-} */
-
-
-/* styles for a common effect !!!YOU NEED THEM */
-/* .effect {
-} */
 .effect a {
   text-decoration: none !important;
   width: 60px;
@@ -198,7 +184,6 @@
 .effect a:before {
   content: "";
   display: inline-block;
-  /* height: 100%; */
   vertical-align: middle;
 }
 .effect a i {
@@ -219,4 +204,4 @@
 
 .icon-color{
 color:#fff;
-}
+} */
