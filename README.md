@@ -6,6 +6,9 @@
 ## Home page 
 ![HomePage](https://user-images.githubusercontent.com/76704724/115408420-7f52e600-a1f9-11eb-9d74-51d858fac8a0.gif)
 
+## Rental Cars
+![Rental Cars](https://user-images.githubusercontent.com/76704724/115489989-da222700-a265-11eb-9758-637075d46f61.gif)
+
 ## Not Found Car 
 ![NotFoundCar](https://user-images.githubusercontent.com/76704724/115489250-86fba480-a264-11eb-8bae-2a2ded55f80c.gif)
 
