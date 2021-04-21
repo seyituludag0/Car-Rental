@@ -203,28 +203,7 @@ button:hover i {
   -webkit-transform: translateX(4px);
   transform: translateX(4px);
 }
-@media (max-width: 767px) {
-  h3 {
-    font-size: 38px;
-  }
-  p {
-    font-size: 14px;
-    padding: 0;
-  }
-  .inner {
-    padding: 27px 20px 37px;
-    border: none;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    -ms-box-shadow: none;
-    -o-box-shadow: none;
-  }
-  .wrapper {
-    background: #39459b;
-    border: 10px solid #0d99d7;
-  }
-}
+
 
 #input-color{
   background-color: #39459b;
