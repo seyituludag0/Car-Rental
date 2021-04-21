@@ -1,2 +1,34 @@
- linguist-vendored
-.ts linguist-vendored=false
+#  linguist-vendored
+# .ts linguist-vendored=false
+
+
+$ linguist --breakdown .
+% 75.04 JavaScript%
+24.96 TypeScript
+
+JavaScript:
+rollup.config.js
+
+TypeScript:
+src / library.ts
+test / library.test.ts
+
+$ echo  ' tools / * linguist-vendored = false '  > .gitattributes
+$ git add ! $ && git commit -m " .gitattributes dosyası ekle "
+ [master 53072e0] .gitattributes dosyası ekle
+1 dosya değiştirildi, 1 ekleme (+)
+oluşturma modu 100644 .gitattributes
+
+$ linguist --breakdown .
+% 85,74 TypeScript% 14,26
+JavaScript
+
+JavaScript:
+rollup.config.js
+
+TypeScript:
+src / library.ts
+test / library.test.ts
+tools / gh-pages-publish.ts
+tools / init.ts
+tools / semantic-release-ready.ts
