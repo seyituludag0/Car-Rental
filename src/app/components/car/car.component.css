@@ -88,11 +88,13 @@ li {
   display: -ms-flexbox;
   display: flex;
   align-items: center;
-  background: #fff;
+  background-color: #ecf0f1;
   border-radius: 10px;
   box-shadow: 0px 3px 9px 0px rgba(120, 120, 120, 0.09);
+  margin-top: 1rem;
   margin-bottom: 35px;
   padding: 18px 30px 18px 18px;
+
 }
 .inventory-list-thumb {
   width: 291px;
