@@ -15,7 +15,7 @@ import { CarService } from 'src/app/services/carService/car.service';
 export class CarComponent implements OnInit {
   baseUrl = 'https://localhost:44357/uploads/carImages/'
   cars: Car[] = [];
-  defaultImg = "defaultimage.png"
+  defaultImg = "logo.svg"
   images: CarImage[] = [];
   carDetail: CarDetail[] = [];
   dataLoaded = false;

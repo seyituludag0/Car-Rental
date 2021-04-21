@@ -1,7 +1,5 @@
 <!-- Carousel -->
-<div *ngIf="dataLoaded == true">
-
-</div>
+<div *ngIf="dataLoaded == true"></div>
 <!-- Carousel -->
 
 <!-- Filters -->
@@ -22,7 +20,7 @@
       class="form-control"
       id="filterColorText"
       placeholder="Model adı giriniz"
-      style="margin-top: -25px;"
+      style="margin-top: -25px"
     />
   </div>
   <!-- Loading -->
@@ -47,61 +45,108 @@
   <!-- Loading -->
 
   <!-- Cars -->
-  <div class="row">
-    <div
-      class="col-md-4 car-box"
-      *ngFor="let car of carDetail | filterCar: carfilterText"
-    >
-
-    <!-- <img
-        [src]="
-        car.imagePath.length !== 0
-          ? baseUrl + car.imagePath[0]
-          : baseUrl + defaultImg
-      " class="card-img-top"
-      style="height:13rem"
-        /> -->
-
-
-      <div class="card">
-        <img
-        [src]="
-        car.imagePath.length !== 0
-          ? baseUrl + car.imagePath[0]
-          : baseUrl + defaultImg
-      " class="card-img-top"
-      style="height:13rem"
-        />
-        <div class="card-body">
-          <h5 class="card-title">
-            <b>Model</b><span class="float-right">{{ car.modelName }}</span>
-          </h5>
-          <p>
-            <b>Marka</b> <span class="float-right">{{ car.brandName }}</span>
+  <div>
+    <div *ngFor="let car of carDetail | filterCar: carfilterText">
+      <div class="inventory-list-item">
+        <div class="inventory-list-thumb">
+          <img
+            [src]="
+              car.imagePath.length !== 0
+                ? baseUrl + car.imagePath[0]
+                : baseUrl + defaultImg
+            "
+            class="card-img-top"
+          />
+          <!-- <ul class="inv-thumb-meta">
+            <li>
+              <a
+                href="assets/konforlu-dizel-araclar.jpg"
+                class="popup-image"
+                data-toggle="tooltip"
+                data-placement="top"
+                data-original-title="View Image"
+                ><i class="fas fa-camera"></i
+              ></a>
+             </li>
+            <li>
+              <a
+                href="inventory-details.html"
+                data-toggle="tooltip"
+                data-placement="top"
+                data-original-title="Details"
+                ><i class="fas fa-info"></i
+              ></a>
+            </li>
+          </ul> -->
+        </div>
+        <div class="inventory-list-content">
+          <div class="inv-content-top">
+            <ul>
+              <li class="option">
+                <a routerLink="/car-detail/{{ car.id }}"
+                  ><font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit">Kirala</font></font
+                  ></a
+                >
+              </li>
+              <li class="price">
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit">{{car.dailyPrice}}₺</font></font
+                ><span
+                  ><font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit">/ gün</font></font
+                  ></span
+                >
+              </li>
+            </ul>
+          </div>
+          <h4>
+            <a href="inventory-details.html"
+              ><font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit"
+                  >{{car.modelName}}</font
+                ></font
+              ></a
+            >
+          </h4>
+          <p class="location">
+            <i class="fas fa-map-marker-alt icon"></i
+            ><font style="vertical-align: inherit"
+              ><font style="vertical-align: inherit"
+                ><a href="https://goo.gl/maps/m7xPQZe9ZeveDnw99" class="location-info-color" target="_blank">İstanbul Bağcılar</a></font
+              ></font
+            >
           </p>
-          <p>
-            <b>Renk</b><span class="float-right">{{ car.colorName }}</span>
-          </p>
-          <p>
-            <b>Günlük Ücret</b
-            ><span class="float-right">{{ car.dailyPrice }}</span>
-          </p>
-          <p>
-            <b>Findex Puanı</b
-            ><span class="float-right">{{ car.minFindex }}</span>
-          </p>
-          <button
-            routerLink="/car-detail/{{ car.id }}"
-            type="button"
-            class="btn w-100 btn-lg btn-primary"
-          >
-            Detayı Görüntüle
-          </button>
+          <div class="inv-item-meta">
+            <ul>
+              <li class="info">
+                <a routerLink="/car-detail/{{ car.id }}"
+                  ><i class="fas fa-info"></i
+                  ><font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit"
+                      >Detayları Gör</font
+                    ></font
+                  ></a
+                >
+              </li>
+              <li>
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit"
+                    >Model: {{car.modelYear}}</font
+                  ></font
+                >
+              </li>
+              <li>
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit"
+                    >Findex Puanı: {{car.minFindex}}</font
+                  ></font
+                >
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <!-- Cars -->
-
-
 </div>

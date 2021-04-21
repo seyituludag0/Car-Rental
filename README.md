@@ -7,7 +7,7 @@
 ![HomePage](https://user-images.githubusercontent.com/76704724/115408420-7f52e600-a1f9-11eb-9d74-51d858fac8a0.gif)
 
 ## Not Found Car 
-![NotFoundCar](https://user-images.githubusercontent.com/76704724/115408922-f4beb680-a1f9-11eb-8404-4b5d2b0a0a4a.gif)
+![NotFoundCar](https://user-images.githubusercontent.com/76704724/115489250-86fba480-a264-11eb-8bae-2a2ded55f80c.gif)
 
 ## Register 
 ![Register](https://user-images.githubusercontent.com/76704724/115411626-4bc58b00-a1fc-11eb-9d0c-9d7f76932a5a.PNG)
@@ -32,6 +32,9 @@
 
 ## Profile Navbar
 ![ProfileNavbar](https://user-images.githubusercontent.com/76704724/115423632-a8c63e80-a206-11eb-937a-53f0684d615d.PNG)
+
+## About Us
+![AboutUs](https://user-images.githubusercontent.com/76704724/115488552-62eb9380-a263-11eb-9414-1e9771c84ad7.PNG)
 
 ## Detail 
 ![CarDetail](https://user-images.githubusercontent.com/76704724/115416564-8f21f880-a200-11eb-85c6-f38ed01e7f0a.PNG)
