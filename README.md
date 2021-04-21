@@ -33,6 +33,9 @@
 ## Profile Navbar
 ![ProfileNavbar](https://user-images.githubusercontent.com/76704724/115423632-a8c63e80-a206-11eb-937a-53f0684d615d.PNG)
 
+## About Us
+![AboutUs](https://user-images.githubusercontent.com/76704724/115488552-62eb9380-a263-11eb-9414-1e9771c84ad7.PNG)
+
 ## Detail 
 ![CarDetail](https://user-images.githubusercontent.com/76704724/115416564-8f21f880-a200-11eb-85c6-f38ed01e7f0a.PNG)
 
