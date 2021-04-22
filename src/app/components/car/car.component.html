@@ -57,7 +57,7 @@
             "
             class="card-img-top"
           />
-          <!-- <ul class="inv-thumb-meta">
+           <ul class="inv-thumb-meta">
             <li>
               <a
                 href="assets/konforlu-dizel-araclar.jpg"
@@ -70,14 +70,14 @@
              </li>
             <li>
               <a
-                href="inventory-details.html"
+                routerLink="/car-detail/{{car.id}}"
                 data-toggle="tooltip"
                 data-placement="top"
                 data-original-title="Details"
                 ><i class="fas fa-info"></i
               ></a>
             </li>
-          </ul> -->
+          </ul>
         </div>
         <div class="inventory-list-content">
           <div class="inv-content-top">
@@ -86,8 +86,8 @@
                 <a routerLink="/car-detail/{{ car.id }}"
                   ><font style="vertical-align: inherit"
                     ><font style="vertical-align: inherit">Kirala</font></font
-                  ></a
-                >
+                  >
+                </a>
               </li>
               <li class="price">
                 <font style="vertical-align: inherit"
@@ -126,8 +126,8 @@
                     ><font style="vertical-align: inherit"
                       >Detayları Gör</font
                     ></font
-                  ></a
-                >
+                  >
+                </a>
               </li>
               <li>
                 <font style="vertical-align: inherit"
