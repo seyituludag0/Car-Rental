@@ -43,6 +43,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { SuccesssendemailComponent } from './components/contact/successSendEmail/successsendemail.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
@@ -89,6 +90,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MDBBootstrapModule.forRoot(),
     ToastrModule.forRoot({
       positionClass:"toast-bottom-right"
     }),
