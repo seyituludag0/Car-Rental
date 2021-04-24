@@ -57,8 +57,8 @@
             "
             class="card-img-top"
           />
-           <ul class="inv-thumb-meta">
-            <li>
+          <ul class="inv-thumb-meta">
+            <!-- <li>
               <a
                 href="assets/konforlu-dizel-araclar.jpg"
                 class="popup-image"
@@ -67,10 +67,10 @@
                 data-original-title="View Image"
                 ><i class="fas fa-camera"></i
               ></a>
-             </li>
+            </li> -->
             <li>
               <a
-                routerLink="/car-detail/{{car.id}}"
+                routerLink="/car-detail/{{ car.id }}"
                 data-toggle="tooltip"
                 data-placement="top"
                 data-original-title="Details"
@@ -91,7 +91,9 @@
               </li>
               <li class="price">
                 <font style="vertical-align: inherit"
-                  ><font style="vertical-align: inherit">{{car.dailyPrice}}₺</font></font
+                  ><font style="vertical-align: inherit"
+                    >{{ car.dailyPrice }}₺</font
+                  ></font
                 ><span
                   ><font style="vertical-align: inherit"
                     ><font style="vertical-align: inherit">/ gün</font></font
@@ -103,9 +105,9 @@
           <h4>
             <a href="inventory-details.html"
               ><font style="vertical-align: inherit"
-                ><font style="vertical-align: inherit"
-                  >{{car.modelName}}</font
-                ></font
+                ><font style="vertical-align: inherit">{{
+                  car.modelName
+                }}</font></font
               ></a
             >
           </h4>
@@ -113,7 +115,12 @@
             <i class="fas fa-map-marker-alt icon"></i
             ><font style="vertical-align: inherit"
               ><font style="vertical-align: inherit"
-                ><a href="https://goo.gl/maps/m7xPQZe9ZeveDnw99" class="location-info-color" target="_blank">İstanbul Bağcılar</a></font
+                ><a
+                  href="https://goo.gl/maps/m7xPQZe9ZeveDnw99"
+                  class="location-info-color"
+                  target="_blank"
+                  >İstanbul Bağcılar</a
+                ></font
               ></font
             >
           </p>
@@ -132,16 +139,17 @@
               <li>
                 <font style="vertical-align: inherit"
                   ><font style="vertical-align: inherit"
-                    >Model: {{car.modelYear}}</font
+                    >Model: {{ car.modelYear }}</font
                   ></font
                 >
               </li>
               <li>
                 <font style="vertical-align: inherit"
                   ><font style="vertical-align: inherit"
-                    >Findex Puanı: {{car.minFindex}}</font
+                    >Findex Puanı: {{ car.minFindex }}</font
                   ></font
                 >
+              </li>
             </ul>
           </div>
         </div>
