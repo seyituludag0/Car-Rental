@@ -18,6 +18,11 @@ export class CustomerService {
     return this.httpClient.get<ListResponseModel<Customer>>(newUrl)
   }
 
+  listCustomer(userId:number){
+    let newUrl = this.apiUrl + "customers/getcustomerbyuserid?id=" + userId
+    return this.httpClient.get<ListResponseModel<Customer>>(newUrl)
+  }
+
   getCustomerByUserId(userId:number){
     let newUrl = this.apiUrl + "customers/getcustomerbyuserid?id=" + userId
     return this.httpClient.get<SingleResponseModel<Customer>>(newUrl)

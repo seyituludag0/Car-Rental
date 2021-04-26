@@ -56,9 +56,9 @@ export class RentalComponent implements OnInit {
   }
 
   getCustomer() {
-    this.customerService.getCustomers().subscribe((response) => {
-      this.customers = response.data;
-    });
+    this.customerService.listCustomer(this.authService.userId).subscribe(response=>{
+      this.customers = response.data
+    })
   }
 
   getCarDetails(carId: number) {

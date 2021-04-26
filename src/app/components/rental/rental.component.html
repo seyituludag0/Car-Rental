@@ -43,10 +43,10 @@ aria-hidden="true"
 
     <div class="form-group row mb-2">
       <label for="example-date-input" class="col-4 col-form-label"
-      >Müşteri</label
+      >Şirket</label
     >
     <div class="col-8">
-      <select class="form-select" [(ngModel)]="id">
+       <select class="form-select" [(ngModel)]="id">
         <option *ngFor="let customer of customers" value="{{customer.id}}"
         >
         {{customer.companyName}}

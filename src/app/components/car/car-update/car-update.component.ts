@@ -70,45 +70,14 @@ export class CarUpdateComponent implements OnInit {
   getCarById(carId: number) {
     this.carService.getCarDetails(carId).subscribe((response) => {
       this.car = response.data;
-      // console.log('====================================');
-      // console.log(response.data);
-      // console.log('====================================');
       this.createCarUpdateForm();
     });
   }
-
-  // update() {
-  //   if(this.carUpdateForm.valid){
-  //     console.log(this.carUpdateForm.value);
-  //     let carModel = Object.assign({},this.carUpdateForm.value);
-  //     this.carService.update(carModel).subscribe(response=>{
-  //       console.log('====================================');
-  //       console.log(response.data);
-  //       console.log('====================================');
-  //       this.toastrService.success(response.message, 'Başarılı');
-  //       // this.updateImage();
-  //       this.router.navigate(["/"])
-  //     },responseError=>{
-  //       if (responseError.error.Errors.length>0) {
-  //         for (let i = 0; i < responseError.error.Errors.length; i++) {
-  //           this.toastrService.error(  responseError.error.Errors[i].ErrorMessage,
-  //             'Doğrulama Hatası')
-  //         }
-  //       }
-  //     })
-  //   }else{
-  //     this.toastrService.info('Form Bilgileriniz Eksik!', 'Hata');
-  //   }
-  // }
-
 
   update() {
     if (this.carUpdateForm.valid) {
       let carModel = Object.assign({}, this.carUpdateForm.value);
       this.carService.update(carModel).subscribe((response) => {
-        console.log('====================================');
-      console.log(this.carUpdateForm.value);
-      console.log('====================================');
         this.toastrService.success(response.message, 'Başarılı');
         this.router.navigate(["/operations"])
       },responseError=>{
