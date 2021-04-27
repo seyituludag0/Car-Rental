@@ -40,7 +40,7 @@ export class BrandAddComponent implements OnInit {
       this.brandService.add(brandModel).subscribe(
         (response) => {
           this.toastrService.success(response.message, 'Başarılı');
-          this.router.navigate(["/"])
+          this.router.navigate(["/operations"])
         },
         (responseError) => {
           if (responseError.error.Errors.length > 0) {

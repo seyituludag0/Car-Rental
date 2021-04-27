@@ -54,7 +54,7 @@ export class CarAddComponent implements OnInit {
           this.savedCarId = response.data.id;
           this.addImage();
           this.toastrService.success("Resim(ler) ekledi.", "Başarılı")
-          this.router.navigate(["/"])
+          this.router.navigate(["/operations"])
         },
         (responseError) => {
           if (responseError.error.Errors.length > 0) {
