@@ -7,13 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
   constructor() { }
-  dataLoaded=false
   ngOnInit(): void {
-    this.dataLoad();
-  }
-
-  dataLoad(){
-    this.dataLoaded = true
   }
 
 }
