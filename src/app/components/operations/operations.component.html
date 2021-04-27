@@ -17,28 +17,44 @@
       </h2>
       <div
         id="collapseOne"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse hide"
         aria-labelledby="headingOne"
         data-bs-parent="#accordionExample"
       >
         <div class="accordion-body">
-          <div class="row">
-            <ul class="list-group" style="display: contents;">
-              <li class="list-group-item col-md-2" routerLink="/car/add" style="padding-top: 25px;
-              padding-left: 95px; margin-left: 450px;">
-                <i class="fas fa-car fa-2x" style="margin-left: -1rem;">  Ekle</i>
+          <div class="row" style="margin-left: -25px;">
+            <ul class="list-group" style="display: contents">
+              <li
+                class="list-group-item col-md-2"
+                routerLink="/car/add"
+                style="
+                  padding-top: 25px;
+                  padding-left: 95px;
+                  margin-left: 450px;
+                "
+              >
+                <i class="fas fa-car fa-2x" style="margin-left: -1rem"> Ekle</i>
               </li>
-              <li class="list-group-item col-md-2 brand" routerLink="/brand/add" style="padding-left: 95px;">
+              <li
+                class="list-group-item col-md-2 brand"
+                routerLink="/brand/add"
+                style="padding-left: 95px; font-weight: 700; font-size: 1.5rem"
+              >
                 <img
-                  src="https://www.kisa.link/OKqh"
-                  style="width: 50px; height: 50px; margin-left: -40px;"
+                  src="assets/brand.svg"
+                  style="width: 50px; height: 50px; margin-left: -40px"
                   alt="Brand Logo"
                 />
                 Ekle
               </li>
-              <li class="list-group-item col-md-2" routerLink="/color/add" style="padding-top: 25px;
-              padding-left: 95px;">
-                <i class="fas fa-palette fa-2x" style="margin-left: -1rem;">  Ekle</i>
+              <li
+                class="list-group-item col-md-2"
+                routerLink="/color/add"
+                style="padding-top: 25px; padding-left: 95px"
+              >
+                <i class="fas fa-palette fa-2x" style="margin-left: -1rem">
+                  Ekle</i
+                >
               </li>
             </ul>
           </div>
@@ -47,7 +63,7 @@
     </div>
   </div>
 </div>
-<h5 style="text-align: center">Arabalar</h5>
+<h5 style="text-align: center; margin-top: 10px;">Arabalar</h5>
 <table class="table">
   <thead>
     <tr>
@@ -79,7 +95,6 @@
           class="btn btn-danger"
           holdable
           (holdTime)="holdHandlerCar($event, car)"
-
         >
           Sil
         </button>
