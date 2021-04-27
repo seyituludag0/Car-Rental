@@ -12,7 +12,7 @@ import { AuthService } from 'src/app/services/authService/auth.service';
   styleUrls: ['./car-detail.component.css'],
 })
 export class CarDetailComponent implements OnInit {
-  baseUrl = 'https://localhost:44357/uploads/carImages/'
+  baseUrl = 'https://localhost:44357/uploads/'
   carDetail: CarDetail;
   userFindex:number
   carImage: CarImage[] = [];

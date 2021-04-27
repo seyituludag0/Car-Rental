@@ -6,7 +6,7 @@
         Markalar
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <div class="mb-3" *ngIf="dataLoaded == true">
           <input type="text" [(ngModel)]="filterText" class="form-control"
@@ -29,6 +29,8 @@
             [ngClass]="getCurrentBrandClass(brand)"
           >
             {{ brand.name }}
+            <img src="https://localhost:44357/uploads/{{brand.imagePath}}" alt="{{brand.name}}"
+             style="width: 2rem; float: right;">
           </li>
         </ul>
       </div>
