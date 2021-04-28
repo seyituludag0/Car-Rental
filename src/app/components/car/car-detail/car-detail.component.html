@@ -1,93 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>ReCap Project</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Carnation - Car Dealership and Listings HTML Template</title>
+    <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+
+    <!-- CSS here -->
   </head>
   <body>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
-    />
-    <div class="container" *ngIf="carDetail">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="project-info-box mt-0">
-            <h5>CAR DETAILS</h5>
-            <p class="mb-0">{{ carDetail.description }}</p>
-          </div>
-          <hr />
-          <div class="project-info-box">
-            <p><b>Marka: </b> {{ carDetail.brandName }}</p>
-            <p><b>Model: </b> {{ carDetail.modelName }}</p>
-            <p><b>Renk: </b> {{ carDetail.colorName }}</p>
-            <p class="mb-0">
-              <b>Günlük Fiyat: </b> {{ carDetail.dailyPrice }} ₺
-            </p>
-            <p><b>Model Yılı: </b> {{ carDetail.modelYear }}</p>
-            <p><b>Findex Puanı: </b> {{ carDetail.minFindex }}</p>
-          </div>
-        </div>
+    <!-- main-area -->
+    <main *ngIf="carDetail">
+      <!-- breadcrumb-area -->
+      <section
+        class="breadcrumb-area breadcrumb-bg inventory-details-breadcrumb"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-12" style="margin-top: -5rem;">
+              <!-- Carousel -->
+              <h2 style="text-align: center">{{ carDetail.brandName }}</h2>
+              <mdb-carousel
+                class="carousel slide carousel-fade"
+                [animation]="'fade'">
+                <mdb-carousel-item
+                  *ngFor="
+                    let image of carImage;
+                    index as i;
+                    first as firstImage"
+                  [ngClass]="{ active: firstImage }"
 
-        <div *ngIf ="carImage.length>1"
-          class="col-md-7 carousel slide" style="margin-top: 8em;"
-          id="carouselExampleIndicators"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner image">
-            <div
-              class="carousel-item"
-              *ngFor="let image of carImage; index as i; first as firstImage"
-              [ngClass]="{ active: firstImage }"
-            >
-              <img draggable="false"
-                src="https://localhost:44357/uploads/{{image.imagePath}}" class="d-block w-100"
-              />
+                >
+                  <img
+                    style="margin-left: 17rem"
+                    class="d-block w-55"
+                    src="https://localhost:44357/uploads/{{ image.imagePath }}"
+                    alt="{{ carDetail.modelName }}"
+                  />
+                </mdb-carousel-item>
+              </mdb-carousel>
+              <!-- Carousel -->
+
+              <div class="breadcrumb-content text-center"></div>
             </div>
           </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
-      </div>
+      </section>
+      <!-- breadcrumb-area-end -->
 
+      <!-- inventory-list-area -->
+      <section class="inventory-details-area gray-lite-bg pt-120 pb-120">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="inventory-features mb-30">
+                <div class="inv-details-title">
+                  <h5>DETAY SAYFASI</h5>
+                </div>
+                <div class="row">
+                  <div class="col-md-3 col-sm-4">
+                    <div class="inventory-features-item">
+                      <h6>Marka :</h6>
+                      <span>{{ carDetail.brandName }}</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-4">
+                    <div class="inventory-features-item">
+                      <h6>Model :</h6>
+                      <span>{{ carDetail.modelName }}</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-4">
+                    <div class="inventory-features-item">
+                      <h6>Renk :</h6>
+                      <span>{{ carDetail.colorName }}</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-4">
+                    <div class="inventory-features-item">
+                      <h6>Model Yılı :</h6>
+                      <span>{{ carDetail.modelYear }}</span>
+                    </div>
+                  </div>
 
-      <div class="control-findex" *ngIf="carDetail.minFindex<=userFindex">
-        <div class="d-grid gap-2 mb-2" *ngIf="carDetail.status">
-          <app-rental></app-rental>
+                  <div class="col-md-3 col-sm-4">
+                    <div class="inventory-features-item">
+                      <h6>Günlük Fiyat :</h6>
+                      <span>{{ carDetail.dailyPrice }}</span>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 col-sm-4">
+                    <div class="inventory-features-item">
+                      <h6>Findex Puanı :</h6>
+                      <span>{{ carDetail.minFindex }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="inventory-details-description mb-30">
+                <div class="inv-details-title">
+                  <h5>Açıklama</h5>
+                </div>
+                <p>
+                  <span>Aouda was anxious</span> though she said nothing. As for
+                  Passepartout thought Mr. Fogg’s manovre simply glorious. The
+                  captain had said “betwen eleven and twve knots,” and the
+                  Henrietta said the confirmed his she said nothing prediction.
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected.
+                </p>
+                <div class="inv-details-img">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <img
+                        [src]="
+                          carDetail.imagePath.length !== 0
+                            ? baseUrl + carDetail.imagePath[0]
+                            : baseUrl + defaultImg
+                        "
+                        class="card-img-top"
+                      />
+                    </div>
+                    <div class="col-sm-6">
+                      <img
+                      [src]="
+                      carDetail.imagePath.length !== 0
+                        ? baseUrl + carDetail.imagePath[1]
+                        : baseUrl + defaultImg
+                    "
+                    class="card-img-top"
+                      />
+                    </div>
+                    <div class="col-sm-6">
+                      <img
+                        [src]="
+                          carDetail.imagePath.length !== 0
+                            ? baseUrl + carDetail.imagePath[2]
+                            : baseUrl + defaultImg
+                        "
+                        class="card-img-top"
+                      />
+                    </div>
+                    <div class="col-sm-6">
+                      <img
+                      [src]="
+                      carDetail.imagePath.length !== 0
+                        ? baseUrl + carDetail.imagePath[3]
+                        : baseUrl + defaultImg
+                    "
+                    class="card-img-top"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="d-grid gap-2 mb-2" *ngIf="!carDetail.status">
-            <div class="alert alert-danger">Araç şuan kiralık durumda</div>
-        </div>
-      </div>
-
-      <div *ngIf="carDetail.minFindex>userFindex">
-        <div class="alert alert-danger">Findex puanınız yetersiz</div>
-      </div>
-    </div>
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript"></script>
+      </section>
+      <!-- inventory-list-area-end -->
+    </main>
+    <!-- main-area-end -->
   </body>
 </html>
