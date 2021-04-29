@@ -40,7 +40,7 @@
 ![AboutUs](https://user-images.githubusercontent.com/76704724/115488552-62eb9380-a263-11eb-9414-1e9771c84ad7.PNG)
 
 ## Detail 
-![CarDetail](https://user-images.githubusercontent.com/76704724/115416564-8f21f880-a200-11eb-85c6-f38ed01e7f0a.PNG)
+![Detail](https://user-images.githubusercontent.com/76704724/116632042-dd509d80-a95e-11eb-96b7-cb5351aa5bb0.gif)
 
 ## Insufficient Findex Points 
 ![InsufficientFindexPoints](https://user-images.githubusercontent.com/76704724/115416725-b11b7b00-a200-11eb-838b-7e4c6e57595b.PNG)
@@ -49,16 +49,10 @@
 ![CarRented](https://user-images.githubusercontent.com/76704724/115416823-c2fd1e00-a200-11eb-9f73-066ec86583bd.PNG)
  
 ## Rent 
-![Rent](https://user-images.githubusercontent.com/76704724/115416971-e758fa80-a200-11eb-80a0-c18ce6102fd7.PNG)
+![Rent](https://user-images.githubusercontent.com/76704724/116632242-5f40c680-a95f-11eb-8d1c-9eadf59a1019.PNG)
 
 ## Rent 1
-![Rent1](https://user-images.githubusercontent.com/76704724/115416949-e2944680-a200-11eb-9a64-feb319de20e8.PNG)
-
-## Rent 2
-![Rent2](https://user-images.githubusercontent.com/76704724/115417000-ecb64500-a200-11eb-913f-b43d21256bb1.PNG)
-
-## Rent 3
-![Rent3](https://user-images.githubusercontent.com/76704724/115416981-e922be00-a200-11eb-991d-6e0efeaa3288.PNG)
+![Rent1](https://user-images.githubusercontent.com/76704724/116632247-6536a780-a95f-11eb-8456-34f4bad74f99.PNG)
 
 ## Cart 
 ![Cart](https://user-images.githubusercontent.com/76704724/115417410-43238380-a201-11eb-9d13-a3ee6919a475.PNG)
